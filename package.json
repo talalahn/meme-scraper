@@ -40,5 +40,12 @@
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
     "@typescript-eslint/utils": "5.22.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.10",
+    "html-get": "^2.9.16",
+    "node-fetch": "^3.2.4",
+    "request": "^2.88.2"
   }
 }
