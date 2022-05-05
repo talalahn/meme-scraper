@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import cheerio from 'cheerio';
+import cliProgress from 'cli-progress';
 import request from 'request';
 
 const URL_TO_PARSE = 'https://memegen-link-examples-upleveled.netlify.app/';

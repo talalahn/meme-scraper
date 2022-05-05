@@ -1884,6 +1884,13 @@ cli-cursor@^1.0.1:
   dependencies:
     restore-cursor "^1.0.1"
 
+cli-progress@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.11.0.tgz#03651defd06182a5396ddc2a41da17c2f257ecdf"
+  integrity sha512-ug+V4/Qy3+0jX9XkWPV/AwHD98RxKXqDpL37vJBOxQhD90qQ3rDqDKoFpef9se91iTUuOXKlyg2HUyHBo5lHsQ==
+  dependencies:
+    string-width "^4.2.3"
+
 cli-width@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-1.1.1.tgz#a4d293ef67ebb7b88d4a4d42c0ccf00c4d1e366d"
@@ -2335,6 +2342,11 @@ electron-to-chromium@^1.4.118:
   version "1.4.132"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.132.tgz#b64599eb018221e52e2e4129de103b03a413c55d"
   integrity sha512-JYdZUw/1068NWN+SwXQ7w6Ue0bWYGihvSUNNQwurvcDV/SM7vSiGZ3NuFvFgoEiCs4kB8xs3cX2an3wB7d4TBw==
+
+emoji-regex@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
+  integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
 
 emoji-regex@^9.2.2:
   version "9.2.2"
@@ -3529,6 +3541,11 @@ is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
   integrity sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
+
+is-fullwidth-code-point@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
+  integrity sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
 
 is-glob@^2.0.0:
   version "2.0.1"
@@ -5529,6 +5546,15 @@ string-width@^2.0.0, string-width@^2.1.1:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
+
+string-width@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
 
 string.prototype.matchall@^4.0.6:
   version "4.0.7"
