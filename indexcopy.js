@@ -45,37 +45,36 @@ if (!process.argv[2]) {
     };
 
     for (let counter = 0; counter < 10; counter++) {
-      async function progressBar() {
-        for (let i = 0; i < 10; i++) {
-          const dots = '.'.repeat(100);
-          const left = 9 - i;
-          const empty = ' '.repeat(left);
-          process.stdout.write(`\r[${dots}] ${(i + 1) * 10}%`);
-          // process.stdout.write(
-          //   `\r${dots.replaceAt([i + 1], 'x')} ${(i + 1) * 10}%`,
+      async function main() {
+        const dots = '.'.repeat(counter);
+        const left = 10 - counter;
+        const empty = ' '.repeat(left);
 
-          await imageDownloaded;
+        process.stdout.write(`\r[${dots}${empty}] ${counter * 5}%`);
+        await wait(80);
+        main();
+        function wait(ms) {
+          return new Promise((res) => setTimeout(res, ms));
         }
-      }
-      progressBar();
-      if (counter < 9) {
-        download(
-          imagesWithJpgEnding[counter],
-          `./memes/0${counter + 1}.jpg`,
-          function () {
-            // console.log('Image downloaded');
-            // console.log(imageDownloaded);
-          },
-        );
-      } else {
-        download(
-          imagesWithJpgEnding[counter],
-          `./memes/${counter + 1}.jpg`,
-          function () {
-            // console.log('Image downloaded');
-            // console.log(imageDownloaded);
-          },
-        );
+        if (counter < 9) {
+          download(
+            imagesWithJpgEnding[counter],
+            `./memes/0${counter + 1}.jpg`,
+            function () {
+              // console.log('Image downloaded');
+              console.log(imageDownloaded);
+            },
+          );
+        } else {
+          download(
+            imagesWithJpgEnding[counter],
+            `./memes/${counter + 1}.jpg`,
+            function () {
+              // console.log('Image downloaded');
+              console.log(imageDownloaded);
+            },
+          );
+        }
       }
     }
   });

@@ -47,7 +47,7 @@ if (!process.argv[2]) {
     for (let counter = 0; counter < 10; counter++) {
       async function progressBar() {
         for (let i = 0; i < 10; i++) {
-          const dots = '.'.repeat(100);
+          const dots = '.'.repeat(10);
           const left = 9 - i;
           const empty = ' '.repeat(left);
           process.stdout.write(`\r[${dots}] ${(i + 1) * 10}%`);
@@ -57,6 +57,7 @@ if (!process.argv[2]) {
           await imageDownloaded;
         }
       }
+
       progressBar();
       if (counter < 9) {
         download(
@@ -64,7 +65,7 @@ if (!process.argv[2]) {
           `./memes/0${counter + 1}.jpg`,
           function () {
             // console.log('Image downloaded');
-            // console.log(imageDownloaded);
+            return imageDownloaded;
           },
         );
       } else {
@@ -73,7 +74,7 @@ if (!process.argv[2]) {
           `./memes/${counter + 1}.jpg`,
           function () {
             // console.log('Image downloaded');
-            // console.log(imageDownloaded);
+            return imageDownloaded;
           },
         );
       }
