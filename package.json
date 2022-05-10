@@ -44,7 +44,6 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
-    "cli-progress": "^3.11.0",
     "request": "^2.88.2"
   }
 }
